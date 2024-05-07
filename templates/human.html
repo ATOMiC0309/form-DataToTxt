@@ -1,0 +1,118 @@
+{% extends 'index.html' %}
+
+{% block main %}
+
+<div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-center">
+        <form method="GET">
+            <h1>Get form</h1>
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="first_name"/>
+                <label class="form-label" for="form1Example1">First name</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="last_name"/>
+                <label class="form-label" for="form1Example1">Last name</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="age"/>
+                <label class="form-label" for="form1Example1">Age</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="lang"/>
+                <label class="form-label" for="form1Example1">Language</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="height"/>
+                <label class="form-label" for="form1Example1">Height</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="weight"/>
+                <label class="form-label" for="form1Example1">Weight</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="b_day"/>
+                <label class="form-label" for="form1Example1">Birth date</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="address"/>
+                <label class="form-label" for="form1Example1">Address</label>
+            </div>
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <form method="POST">
+            {% csrf_token %}
+            <!-- Email input -->
+            <h1>Post form</h1>
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="first_name"/>
+                <label class="form-label" for="form1Example1">First name</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="last_name"/>
+                <label class="form-label" for="form1Example1">Last name</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="age"/>
+                <label class="form-label" for="form1Example1">Age</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="lang"/>
+                <label class="form-label" for="form1Example1">Language</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="height"/>
+                <label class="form-label" for="form1Example1">Height</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="weight"/>
+                <label class="form-label" for="form1Example1">Weight</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="day"/>
+                <label class="form-label" for="form1Example1">Birth date</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="address"/>
+                <label class="form-label" for="form1Example1">Address</label>
+            </div>
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <div>
+        <p><b>First name: </b>{{ f_name }}</p>
+        <p><b>Last name: </b>{{ l_name }}</p>
+        <p><b>Age: </b>{{ age }}</p>
+        <p><b>Language: </b>{{ lang }}</p>
+        <p><b>Height: </b>{{ height }}</p>
+        <p><b>Weight: </b>{{ weight }}</p>
+        <p><b>Birth date: </b>{{ b_day }}</p>
+        <b>Address: </b>{{ address }}
+    </div>
+</div>
+
+{% endblock main %}

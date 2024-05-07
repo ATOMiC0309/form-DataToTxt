@@ -1,0 +1,76 @@
+{% extends 'index.html' %}
+
+{% block main %}
+<div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-center">
+        <form method="GET">
+            <h1>Get form</h1>
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="address"/>
+                <label class="form-label" for="form1Example1">Address</label>
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="type"/>
+                <label class="form-label" for="form1Example2">Type house</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="floor"/>
+                <label class="form-label" for="form1Example2">Floors count</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="price"/>
+                <label class="form-label" for="form1Example2">Price</label>
+            </div>
+
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <form method="POST">
+            {% csrf_token %}
+            <!-- Email input -->
+            <h1>Post form</h1>
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="address"/>
+                <label class="form-label" for="form1Example1">Address</label>
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="type"/>
+                <label class="form-label" for="form1Example2">Type house</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="floor"/>
+                <label class="form-label" for="form1Example2">Floors count</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="price"/>
+                <label class="form-label" for="form1Example2">Price</label>
+            </div>
+
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <div>
+        <p><b>Address: </b>{{ address }}</p>
+        <p><b>Type house: </b>{{ type }}</p>
+        <p><b>Floors count: </b>{{ floor }}</p>
+        <p><b>Price: </b>{{ price }}</p>
+    </div>
+</div>
+{% endblock main %}

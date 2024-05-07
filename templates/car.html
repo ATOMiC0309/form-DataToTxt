@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+
+{% block main %}
+<div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-center">
+        <form method="GET">
+            <h1>Get form</h1>
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="car_name"/>
+                <label class="form-label" for="form1Example1">Car name</label>
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="color"/>
+                <label class="form-label" for="form1Example2">Color</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="speed"/>
+                <label class="form-label" for="form1Example2">Speed</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="brand"/>
+                <label class="form-label" for="form1Example2">Brand</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="price"/>
+                <label class="form-label" for="form1Example2">Price</label>
+            </div>
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <form method="POST">
+            {% csrf_token %}
+            <!-- Email input -->
+            <h1>Post form</h1>
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" name="car_name"/>
+                <label class="form-label" for="form1Example1">Car name</label>
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="color"/>
+                <label class="form-label" for="form1Example2">Color</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="speed"/>
+                <label class="form-label" for="form1Example2">Speed</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="brand"/>
+                <label class="form-label" for="form1Example2">Brand</label>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="form1Example2" class="form-control" name="price"/>
+                <label class="form-label" for="form1Example2">Price</label>
+            </div>
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+
+</div>
+<div class="d-flex justify-content-center">
+    <div>
+        <p><b>Car name: </b>{{ car_name }}</p>
+        <p><b>Color: </b>{{ color }}</p>
+        <p><b>Speed: </b>{{ speed }}</p>
+        <p><b>Brand: </b>{{ brand }}</p>
+        <b>Price: </b>{{ price }}
+    </div>
+</div>
+{% endblock main %}
